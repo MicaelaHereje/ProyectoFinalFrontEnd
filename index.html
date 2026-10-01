@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMBRA - Ropa Urbana</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/img/logo.png" alt="UMBRA">
+        </a>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#new" class="nav-link">New Drop</a></li>
+                <li><a href="#catalogo" class="nav-link">Categorías</a></li>
+                <li><a href="#catalogo" class="nav-link">Productos</a></li>
+                <li><a href="#resenas" class="nav-link">Reseñas</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botones de cuenta y carrito -->
+        <div class="nav-buttons">
+            <button type="button" class="btn btn-outline">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                Mi cuenta
+            </button>
+            <button type="button" class="btn btn-solid">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                Carrito
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="titulo-principal">Bienvenido a UMBRA</h1>
+                <p class="descripcion">Ropa hecha para la ciudad a oscuras.</p>
+            </div>
+
+        </section>
+
+        <section class="seccion-productos" id="catalogo">
+            <h2>Productos</h2>
+
+            <div class="productos-grid">
+                <article class="producto">
+                    <img src="assets/img/remera-oversize.jpg" alt="Remera Oversize Void">
+                    <h3>Remera Oversize Void</h3>
+                    <p class="precio">$32.000</p>
+                    <button type="button" class="btn btn-solid">Agregar al carrito</button>
+                </article>
+
+                <article class="producto">
+                    <img src="assets/img/hoodie-black.jpg" alt="Hoodie Essential Black">
+                    <h3>Hoodie Essential Black</h3>
+                    <p class="precio">$58.000</p>
+                    <button type="button" class="btn btn-solid">Agregar al carrito</button>
+                </article>
+
+                <article class="producto">
+                    <img src="assets/img/cargo-pants.jpg" alt="Cargo Pants Urban">
+                    <h3>Cargo Pants Urban</h3>
+                    <p class="precio">$54.000</p>
+                    <button type="button" class="btn btn-solid">Agregar al carrito</button>
+                </article>
+
+                <article class="producto">
+                    <img src="assets/img/campera-night.jpg" alt="Campera Rompeviento Night">
+                    <h3>Campera Rompeviento Night</h3>
+                    <p class="precio">$79.000</p>
+                    <button type="button" class="btn btn-solid">Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion-resenas" id="resenas">
+            <h2>Lo que dicen en la calle</h2>
+
+        <div class="resenas-grid">
+        <article class="resena">
+            <p class="resena-texto">"El hoodie es una locura de calidad, no se deforma ni después de mil lavados."</p>
+            <div class="resena-persona">
+                <span class="avatar"></span>
+                <p class="resena-nombre">Lucas R.</p>
+            </div>
+        </article>
+
+        <article class="resena">
+            <p class="resena-texto">"El cargo pants me quedó perfecto, el calce oversized es justo como se ve en las fotos."</p>
+            <div class="resena-persona">
+                <span class="avatar"></span>
+                <p class="resena-nombre">Martina G.</p>
+            </div>
+        </article>
+
+        <article class="resena">
+            <p class="resena-texto">"Buenísima la tela de la campera para el invierno porteño."</p>
+            <div class="resena-persona">
+                <span class="avatar"></span>
+                <p class="resena-nombre">Ezequiel D.</p>
+            </div>
+        </article>
+    </div>
+    </section>
+
+        <section class="seccion-de-contacto" id="contacto">
+            <h2>Contactanos</h2>
+            <form action="https://formspree.io/f/xgaeoalv" method="POST">
+                <label for="nombre" class="sr-only">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="mensaje" class="sr-only">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Mensaje" required></textarea>
+
+                <button type="submit" class="btn btn-solid">Enviar</button>
+            </form>
+        </section>
+
+        
+
+    </main>    
+    
+    <footer>
+        <div class="footer-row">
+            <a href="#" class="logo">
+                <img src="assets/img/logo.png" alt="UMBRA">
+            </a>
+
+        <ul class="nav-links">
+            <li><a href="#new" class="nav-link">New Drop</a></li>
+            <li><a href="#catalogo" class="nav-link">Productos</a></li>
+            <li><a href="#resenas" class="nav-link">Reseñas</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="inline-group">
+            <a href="#" class="nav-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="nav-link" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="nav-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        </div>
+
+        <div class="footer-row footer-bottom">
+            <p>&copy; 2024 UMBRA. Todos los derechos reservados.</p>
+        <div class="inline-group">
+            <a href="#" class="nav-link">Política de privacidad</a>
+            <a href="#" class="nav-link">Términos de servicio</a>
+        </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>
