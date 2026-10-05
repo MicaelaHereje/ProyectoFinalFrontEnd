@@ -1,3 +1,7 @@
+/* ============================================= */
+/* VARIABLES Y RESET                              */
+/* ============================================= */
+
 :root {
    /* Fondos */
   --bg-primary:#000000;
@@ -23,7 +27,6 @@
   /* Tamaño de fuente y altura de línea */
   --font-size: 1rem;
   --line-height: 1.5;
-
 }
 
 * {
@@ -40,77 +43,21 @@ body {
   line-height: var(--line-height);
 }
 
+
+/* ============================================= */
+/* TIPOGRAFÍA GENERAL                             */
+/* ============================================= */
+
 h1, h2, h3 {
   font-family: var(--font-heading);
   font-weight: 900;
   text-transform: uppercase;
 }
 
-.titulo-principal {
-  margin: 1rem;
-  font-size: 2.5rem;
-  
-}
 
-.descripcion {
-  margin: 1rem;
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-}
-
-.hero {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), /*degrade */
-        url('assets/img/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 2rem;
-}
-
-header {
-    background-color: var(--bg-elevated);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem;
-
-    display: flex;
-    align-items: center;            /* centra logo y menú en vertical */
-    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
-}
-
-.logo img {
-    height: 80px;   /* alto fijo */
-    width: auto;    /* el ancho se ajusta solo para no deformar la imagen */
-}
-
-
-.nav-link {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    
-}
-
-.nav-link:hover {
-    color: var(--accent);
-}
-
-nav ul {
-    display: flex;          /* pone los items en fila */
-    gap: 2rem;              /* espacio entre los links */
-    list-style: none;       /* saca las viñetas */
-}
-
-.nav-buttons {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
+/* ============================================= */
+/* BOTONES (reutilizables)                        */
+/* ============================================= */
 
 .btn {
     padding: 0.6rem 1.4rem;
@@ -148,6 +95,212 @@ nav ul {
 .btn-solid:hover {
     background-color: var(--accent);
 }
+
+
+/* ============================================= */
+/* HEADER                                         */
+/* ============================================= */
+
+header {
+    background-color: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;            /* centra logo y menú en vertical */
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    height: 80px;   /* alto fijo */
+    width: auto;    /* el ancho se ajusta solo para no deformar la imagen */
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-links .nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+
+/* ============================================= */
+/* HERO                                           */
+/* ============================================= */
+
+.titulo-principal {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+.descripcion {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), /*degrade */
+        url('assets/img/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+
+/* ============================================= */
+/* PRODUCTOS                                      */
+/* ============================================= */
+
+.seccion-productos {
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+
+.seccion-productos h2 {
+    margin-bottom: 3rem;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.producto {
+    flex: 1 1 240px;
+    max-width: 280px;
+    background-color: var(--bg-elevated);
+    padding: 1.5rem;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.producto h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    min-height: 2.6em;
+}
+
+.producto .precio {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.producto .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+
+/* ============================================= */
+/* RESEÑAS                                        */
+/* ============================================= */
+
+.seccion-resenas {
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+
+.seccion-resenas h2 {
+    margin-bottom: 3rem;
+}
+
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resena {
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resena-texto {
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+}
+
+.resena-persona {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    flex-shrink: 0;
+}
+
+.resena-nombre {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+/* ============================================= */
+/* CONTACTO                                       */
+/* ============================================= */
 
 /* Oculta la etiqueta a la vista, pero la deja disponible para lectores de pantalla */
 .sr-only {
@@ -209,6 +362,11 @@ nav ul {
     padding: 1rem 3rem;
 }
 
+
+/* ============================================= */
+/* FOOTER                                         */
+/* ============================================= */
+
 .footer-row {
     display: flex;
     align-items: center;
@@ -226,6 +384,10 @@ nav ul {
     font-size: 0.8rem;
 }
 
+.footer-bottom .nav-link {
+    color: var(--text-muted);
+}
+
 .inline-group {
     display: flex;
     align-items: center;
@@ -237,131 +399,10 @@ nav ul {
     transition: color 0.3s ease;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    color: var(--text-muted);
-}
 
-.nav-links .nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-bottom .nav-link {
-    color: var(--text-muted);
-}
-
-.seccion-productos {
-    padding: 5rem 1.5rem;
-    text-align: center;
-}
-
-.seccion-productos h2 {
-    margin-bottom: 3rem;
-}
-
-.productos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.producto {
-    flex: 1 1 240px;
-    max-width: 280px;
-    background-color: var(--bg-elevated);
-    padding: 1.5rem;
-    text-align: left;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-}
-
-.producto img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-.producto h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    min-height: 2.6em;
-    
-}
-
-.producto .precio {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.producto .btn {
-    width: 100%;
-    justify-content: center;
-    margin-top: auto;
-}
-
-.seccion-resenas {
-    padding: 5rem 1.5rem;
-    text-align: center;
-}
-
-.seccion-resenas h2 {
-    margin-bottom: 3rem;
-}
-
-.resenas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.resena {
-    background-color: var(--bg-elevated);
-    border: 1px solid var(--border);
-    padding: 1.5rem;
-    text-align: center;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-}
-
-.resena-texto {
-    color: var(--text-primary);
-    margin-bottom: 1.25rem;
-}
-
-.resena-persona {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: auto;
-    padding-top: 1.25rem;
-}
-
-.avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--bg-primary);
-    flex-shrink: 0;
-}
-
-.resena-nombre {
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Media Queries: Ajustes para pantallas pequeñas */
+/* ============================================= */
+/* RESPONSIVE                                     */
+/* ============================================= */
 
 @media (max-width: 768px) {
 
@@ -393,5 +434,4 @@ nav ul {
     .seccion-de-contacto {
         padding: 3rem 1rem;
     }
-
 }
